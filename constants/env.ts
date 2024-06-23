@@ -11,6 +11,11 @@ export const ENV = {
   API_VERSION: process.env.API_VERSION || "",
   API_PORT: process.env.API_PORT || "",
 
+  EMAIL_HOST: "smtp.gmail.com",
+  EMAIL_PORT: 587,
+  EMAIL_USER: "lazlanrafar@gmail.com",
+  EMAIL_PASSWORD: "epkoiikqzpftnzcg",
+
   LOG_DIR: process.env.LOG_DIR || "./logs",
 
   ENCRYPTION_KEY: process.env.ENCRYPTION_KEY || "",
