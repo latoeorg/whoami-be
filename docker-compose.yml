@@ -1,0 +1,25 @@
+version: "1"
+
+services:
+  postgres:
+    image: postgres
+    container_name: boilerplate-eprisma-ts-postgres
+    ports:
+      - "54329:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db-boilerplate-eprisma-ts
+    volumes:
+      - data_postgres:/var/lib/postgresql/data
+  redis:
+    image: redis
+    container_name: boilerplate-eprisma-ts-redis
+    ports:
+      - "63799:6379"
+    volumes:
+      - data_redis:/data
+
+volumes:
+  data_postgres:
+  data_redis:
